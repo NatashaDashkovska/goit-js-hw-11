@@ -7,6 +7,9 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 const KEY = '29058124-a322c4fcd8952bb4320420928';
 const API_URL = `https://pixabay.com/api/?key=${KEY}&image_type=photo&orientation=horizontal&safesearch=true`;
 
+let page;
+let searchQuery;
+
 async function searchImages(event) {
   event.preventDefault();
   let query = event.currentTarget.elements.searchQuery.value;
